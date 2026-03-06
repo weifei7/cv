@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <title>我的 GitHub 主页</title>
+    <title>魏菲 · 个人主页</title>
     <meta
       name="description"
-      content="个人 GitHub 主页模板，在这里展示你的项目、技能和经历。"
+      content="魏菲 · 算法工程师，聚焦多模态大模型、Agent 与计算机视觉。"
     />
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -30,19 +30,17 @@
     <div class="page">
       <header class="site-header">
         <div class="brand">
-          <!-- TODO: 换成你的名字或昵称 -->
-          <span class="brand__logo">GH</span>
+          <span class="brand__logo">WF</span>
           <div class="brand__text">
-            <span class="brand__name">Your Name</span>
-            <span class="brand__tagline">Software Engineer / Developer</span>
+            <span class="brand__name">魏菲</span>
+            <span class="brand__tagline">算法工程师 · 多模态 & 视觉</span>
           </div>
         </div>
         <nav class="nav">
           <a href="#about">关于我</a>
-          <a href="#skills">技能</a>
-          <a href="#projects">项目</a>
           <a href="#timeline">经历</a>
           <a href="#contact">联系</a>
+          <a href="#publications">论文</a>
         </nav>
       </header>
 
@@ -50,38 +48,26 @@
         <!-- Hero / 简介 -->
         <section class="section hero" id="top">
           <div class="hero__content">
-            <!-- TODO: 换成你的标题和简介 -->
-            <p class="hero__eyebrow">Hello, GitHub 👋</p>
+            <p class="hero__eyebrow">Hello, I'm Wei Fei 👋</p>
             <h1 class="hero__title">
               我是 <span class="hero__highlight">魏菲</span>
             </h1>
             <p class="hero__subtitle">
-              <!-- 建议一两句话：你是谁 / 做什么 -->
-              Multimodal Language Model | Agent | Computer Vision
+              聚焦多模态大模型、Agent 与计算机视觉，从研究到落地优化模型与系统表现。
             </p>
-            <div class="hero__actions">
-              <!-- TODO: 换成你的 GitHub 用户名 -->
-              <a
-                class="btn btn--primary"
-                href="https://github.com/weifei7"
-                target="_blank"
-                rel="noreferrer"
-                >查看我的 GitHub</a
-              >
-              <a class="btn btn--ghost" href="#projects">浏览项目</a>
-            </div>
             <div class="hero__meta">
-              <!-- TODO: 按需修改标签 -->
               <span class="pill">算法工程师</span>
-              <span class="pill"></span>
+              <span class="pill">多模态大模型 · Agent</span>
+              <span class="pill">计算机视觉 · 3D 感知</span>
               <span class="pill">中文 / English</span>
             </div>
           </div>
           <div class="hero__avatar">
-            <!-- TODO: 换成你自己的头像（放到 /images/avatar.jpg 并修改 src） -->
-            <div class="avatar-placeholder">
-              <span>头像</span>
-            </div>
+            <img
+              src="avatar.jpg"
+              alt="魏菲头像"
+              class="hero__avatar-img"
+            />
           </div>
         </section>
 
@@ -89,136 +75,32 @@
         <section class="section" id="about">
           <div class="section__header">
             <h2>关于我</h2>
-            <p>用几段话介绍你自己和你正在做 / 想做的事情。</p>
+            <p>从计算机视觉起步，逐步扩展到多模态大模型、端侧大模型与 Agent 系统的算法工程师。</p>
           </div>
           <div class="section__body grid-2">
             <div class="card card--soft">
-              <!-- TODO: 自我介绍（建议 3~6 句话） -->
               <p>
-                在这里写你的背景，例如：本科/硕士专业，目前所在城市，当前或最近的工作/学习状态。
+                本科与研究生阶段主要在 IIAU-Lab 做计算机视觉方向的研究，围绕失焦模糊检测与去模糊等课题，在 ECCV、TMM、TNNLS 等期刊与会议发表多篇论文。
               </p>
               <p>
-                你可以写自己擅长的领域（如 Web
-                全栈、数据可视化、机器学习、系统设计等），以及你比较在意的工程价值观（如代码质量、可维护性、测试驱动开发等）。
+                2022 年起进入工业界从事算法工程工作，先后在多家团队围绕 AutoML、3D 感知、多模态大模型、端侧大模型等方向做探索与落地，负责从数据、建模到系统集成与效果优化的完整链路。
               </p>
               <p>
-                也可以写一点兴趣爱好，让页面更有个人气质，比如：开源项目、写作、摄影、游戏、健身等等。
+                日常使用 Python + PyTorch 进行建模与实验，也会亲自落地工程化与性能调优，希望把前沿研究变成真正有用、可维护、可迭代的产品能力。
               </p>
             </div>
             <div class="card card--soft">
               <h3 class="card__title">当前关注</h3>
               <ul class="list list--bullet">
-                <!-- TODO: 修改为你当前在学 / 在做的事情 -->
-                <li>学习和实践 TypeScript / React / Next.js</li>
-                <li>维护个人开源项目，尝试自动化测试与 CI</li>
-                <li>关注 AI 工具如何提升开发效率</li>
+                <li>多模态大模型与 Agent 在视觉理解、交互和决策中的应用</li>
+                <li>3D 感知算法在自动驾驶与泛视觉任务中的效果与效率提升</li>
+                <li>AutoML / 数据与训练流程自动化，降低大模型开发门槛</li>
               </ul>
               <h3 class="card__title">偏好技术栈</h3>
               <p class="text-muted">
-                下面只是示例，你可以在「技能」模块里展开写。
+                以 Python + PyTorch 为主，配合常用深度学习与工程工具，关注从模型到系统的端到端优化。
               </p>
             </div>
-          </div>
-        </section>
-
-        <!-- 技能 -->
-        <section class="section" id="skills">
-          <div class="section__header">
-            <h2>技能</h2>
-            <p>简单归类你常用/擅长的技术栈。</p>
-          </div>
-          <div class="section__body skills">
-            <!-- TODO: 调整分类和内容 -->
-            <div class="card">
-              <h3 class="card__title">语言 & 基础</h3>
-              <div class="tags">
-                <span class="tag">TypeScript / JavaScript</span>
-                <span class="tag">Python</span>
-                <span class="tag">Java</span>
-                <span class="tag">CS 基础 · 算法</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card__title">Web / 框架</h3>
-              <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">Next.js</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">REST / GraphQL</span>
-              </div>
-            </div>
-            <div class="card">
-              <h3 class="card__title">工具 & 工程化</h3>
-              <div class="tags">
-                <span class="tag">Git / GitHub</span>
-                <span class="tag">Docker</span>
-                <span class="tag">CI / CD</span>
-                <span class="tag">Linux / Shell</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- 项目 -->
-        <section class="section" id="projects">
-          <div class="section__header">
-            <h2>代表项目</h2>
-            <p>挑 3~6 个你最想给别人看的项目，附上 GitHub 链接。</p>
-          </div>
-          <div class="section__body projects">
-            <!-- TODO: 为每个项目替换内容（可以复制 card） -->
-            <article class="card project">
-              <div class="project__header">
-                <h3 class="project__title">项目名称 Project Name</h3>
-                <span class="project__tag">个人项目</span>
-              </div>
-              <p class="project__desc">
-                用 2~3 句话概括项目：解决了什么问题？用了什么技术栈？有什么亮点？
-              </p>
-              <div class="project__meta">
-                <div class="tags">
-                  <span class="tag">React</span>
-                  <span class="tag">TypeScript</span>
-                  <span class="tag">GitHub Pages</span>
-                </div>
-                <!-- TODO: 换成项目的真实链接 -->
-                <a
-                  href="https://github.com/your-github-username/your-repo"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="project__link"
-                >
-                  查看代码 →
-                </a>
-              </div>
-            </article>
-
-            <article class="card project">
-              <div class="project__header">
-                <h3 class="project__title">项目名称 Project Name</h3>
-                <span class="project__tag project__tag--secondary"
-                  >团队项目</span
-                >
-              </div>
-              <p class="project__desc">
-                介绍你在团队中的角色和具体贡献，例如：负责后端接口设计、前端组件实现、部署和监控等。
-              </p>
-              <div class="project__meta">
-                <div class="tags">
-                  <span class="tag">Node.js</span>
-                  <span class="tag">PostgreSQL</span>
-                  <span class="tag">Docker</span>
-                </div>
-                <a
-                  href="https://github.com/your-github-username/your-repo"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="project__link"
-                >
-                  查看代码 →
-                </a>
-              </div>
-            </article>
           </div>
         </section>
 
@@ -226,25 +108,136 @@
         <section class="section" id="timeline">
           <div class="section__header">
             <h2>经历</h2>
-            <p>教育 / 实习 / 工作按时间列出来，突出你做过的事情。</p>
+            <p>教育 / 研究 / 工业界经历的简要时间线。</p>
           </div>
           <div class="section__body timeline">
-            <!-- TODO: 为每段经历替换内容或复制更多条目 -->
             <div class="timeline__item">
               <div class="timeline__time">
-                <span class="timeline__period">2023 - 至今</span>
-                <span class="timeline__location">城市 · 公司 / 学校</span>
+                <span class="timeline__period">2024.07 - 至今</span>
+                <span class="timeline__location">高德</span>
               </div>
               <div class="timeline__content">
-                <h3 class="timeline__title">职位 / 学位名称</h3>
-                <p class="timeline__subtitle">部门 / 专业（可选）</p>
+                <h3 class="timeline__title">多模态理解 & Agent · 算法工程师</h3>
+                <p class="timeline__subtitle">多模态理解 / Agent 系统</p>
                 <ul class="list list--bullet">
-                  <li>用一条子弹列出你负责或完成的事情。</li>
-                  <li>强调你主动做的项目、解决过的问题或可量化成果。</li>
-                  <li>例如：独立设计并实现 XX 功能，将 YY 提升了 ZZ%。</li>
+                  <li>聚焦多模态理解与 Agent 方向的技术探索与实践，将视觉、文本等多模态信号融合到具体业务场景。</li>
+                  <li>参与多模态 Agent 的整体方案设计与实现，从模型选择、能力编排到线上效果评估与迭代。</li>
                 </ul>
               </div>
             </div>
+            <div class="timeline__item">
+              <div class="timeline__time">
+                <span class="timeline__period">2023.07 - 2024.07</span>
+                <span class="timeline__location">美团</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">多模态 & 端侧大模型 · 算法工程师</h3>
+                <p class="timeline__subtitle">多模态 / 端侧大模型 / 视觉基座模型</p>
+                <ul class="list list--bullet">
+                  <li>在多模态大模型、端侧大模型、视觉基座模型等前沿方向进行技术探索和落地实践。</li>
+                  <li>关注模型在实际业务中的效果、性能和部署成本，探索适合端侧与线上场景的模型方案。</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__time">
+                <span class="timeline__period">2016.09 - 2023.07</span>
+                <span class="timeline__location">大连理工大学 · 本硕</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">大连理工大学 · 本科 & 硕士</h3>
+                <p class="timeline__subtitle">计算机相关专业 · IIAU-Lab</p>
+                <ul class="list list--bullet">
+                  <li>本科阶段系统学习计算机相关课程，为后续视觉与多模态研究打下基础。</li>
+                  <li>硕士阶段在 IIAU-Lab 围绕失焦模糊检测与去模糊开展系列研究，发表多篇相关论文。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 论文 -->
+        <section class="section" id="publications">
+          <div class="section__header">
+            <h2>论文</h2>
+          </div>
+          <div class="section__body">
+            <ul class="list list--bullet">
+              <li>
+                R Li, H Huang, <strong>F Wei</strong>, F Xiong, Y Wang, X Chu.
+                AdaCuRL: Adaptive Curriculum Reinforcement Learning with Invalid Sample Mitigation and Historical Revisiting.
+                arXiv preprint arXiv:2511.09478, 2025.
+              </li>
+              <li>
+                X Zhang, <strong>F Wei</strong>, Y Wang, W Zhao, F Li, X Chu.
+                UPRE: Zero-Shot Domain Adaptation for Object Detection via Unified Prompt and Representation Enhancement.
+                arXiv preprint arXiv:2507.00721, 2025.
+              </li>
+              <li>
+                <strong>F Wei</strong>, X Zhang, A Zhang, B Zhang, X Chu.
+                Lenna: Language Enhanced Reasoning Detection Assistant.
+                ICASSP 2025, 2025.
+              </li>
+              <li>
+                M Kang, X Zhang, <strong>F Wei</strong>, S Xu, Y Liu.
+                Enhancing Image Editing with Chain-of-Thought Reasoning and Multimodal Large Language Models.
+                ICASSP 2025, 2025.
+              </li>
+              <li>
+                X Chu, H Huang, X Zhang, <strong>F Wei</strong>, Y Wang.
+                GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning.
+                arXiv preprint arXiv:2504.02546, 2025.
+              </li>
+              <li>
+                X Zhang, M Kang, <strong>F Wei</strong>, S Xu, Y Liu, L Ma.
+                TIE: Revolutionizing Text-based Image Editing for Complex-Prompt Following and High-Fidelity Editing.
+                arXiv preprint arXiv:2405.16803, 2024.
+              </li>
+              <li>
+                X Chu, L Qiao, X Zhang, S Xu, <strong>F Wei</strong>, Y Yang, X Sun, Y Hu, X Lin, ...
+                MobileVLM V2: Faster and Stronger Baseline for Vision Language Model.
+                arXiv preprint arXiv:2402.03766, 2024.
+              </li>
+              <li>
+                X Chu, L Qiao, X Lin, S Xu, Y Yang, Y Hu, <strong>F Wei</strong>, X Zhang, B Zhang, X Wei, ...
+                MobileVLM: A Fast, Strong and Open Vision Language Assistant for Mobile Devices.
+                arXiv preprint arXiv:2312.16886, 2023.
+              </li>
+              <li>
+                W Zhao, G Hu, <strong>F Wei</strong>, H Wang, Y He, H Lu.
+                Attacking Defocus Detection With Blur-Aware Transformation for Defocus Deblurring.
+                IEEE Transactions on Multimedia (TMM), 2023.
+              </li>
+              <li>
+                W Zhao, <strong>F Wei</strong>, H Wang, Y He, H Lu.
+                Full-Scene Defocus Blur Detection With DeFBD+ via Multi-Level Distillation Learning.
+                IEEE Transactions on Multimedia (TMM), 2023.
+              </li>
+              <li>
+                X Chu, L Qiao, X Lin, S Xu, Y Yang, Y Hu, <strong>F Wei</strong>, X Zhang, B Zhang, X Wei.
+                MobileVLM: A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices.
+                arXiv preprint arXiv:2312.16886, 2023.
+              </li>
+              <li>
+                W Zhao, M Wang, <strong>F Wei</strong>, H Wang, Y He, H Lu.
+                Defocus Blur Detection Attack via Mutual-Referenced Feature Transfer.
+                IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2022.
+              </li>
+              <li>
+                W Zhao, <strong>F Wei</strong>, Y He, H Lu.
+                United Defocus Blur Detection and Deblurring via Adversarial Promoting Learning.
+                European Conference on Computer Vision (ECCV), 2022.
+              </li>
+            </ul>
+            <p class="text-muted">
+              全部论文列表及引用信息请见 Google Scholar：
+              <a
+                href="https://scholar.google.com/citations?hl=zh-CN&user=-ZIk4QMAAAAJ&view_op=list_works&sortby=pubdate"
+                target="_blank"
+                rel="noreferrer"
+                >Google Scholar · Wei Fei</a
+              >。
+            </p>
           </div>
         </section>
 
@@ -252,36 +245,38 @@
         <section class="section" id="contact">
           <div class="section__header">
             <h2>联系我</h2>
-            <p>放一些你愿意公开的联系方式或社交账号。</p>
+            <p>如果你对我的工作或论文感兴趣，欢迎通过以下方式联系。</p>
           </div>
           <div class="section__body contact">
-            <!-- TODO: 按需保留/修改不同方式 -->
             <ul class="list">
               <li>
                 <span class="list__label">GitHub</span>
                 <a
-                  href="https://github.com/your-github-username"
+                  href="https://github.com/weifei7"
                   target="_blank"
                   rel="noreferrer"
                   class="list__value"
-                  >@your-github-username</a
+                  >@weifei7</a
                 >
               </li>
               <li>
                 <span class="list__label">Email</span>
-                <!-- 建议用 GitHub 公开邮箱或专门的求职邮箱 -->
-                <a href="mailto:you@example.com" class="list__value"
-                  >you@example.com</a
+                <a href="mailto:fwei_mail@163.com" class="list__value"
+                  >fwei_mail@163.com</a
                 >
               </li>
               <li>
-                <span class="list__label">LinkedIn</span>
+                <span class="list__label">Phone</span>
+                <span class="list__value">18742516107</span>
+              </li>
+              <li>
+                <span class="list__label">Google Scholar</span>
                 <a
-                  href="https://www.linkedin.com/in/your-linkedin"
+                  href="https://scholar.google.com/citations?hl=zh-CN&user=-ZIk4QMAAAAJ&view_op=list_works&sortby=pubdate"
                   target="_blank"
                   rel="noreferrer"
                   class="list__value"
-                  >your-linkedin</a
+                  >Scholar · Wei Fei</a
                 >
               </li>
             </ul>
@@ -291,12 +286,11 @@
 
       <footer class="site-footer">
         <span class="site-footer__left">
-          <!-- TODO: 可改为你的名字或品牌 -->
-          © <span id="year"></span> Your Name
+          © <span id="year"></span> 魏菲
         </span>
         <span class="site-footer__right">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/weifei7"
             target="_blank"
             rel="noreferrer"
             >GitHub</a
