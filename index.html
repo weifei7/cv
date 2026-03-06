@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>我的 GitHub 主页</title>
+    <meta
+      name="description"
+      content="个人 GitHub 主页模板，在这里展示你的项目、技能和经历。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Noto+Sans+SC:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand">
+          <!-- TODO: 换成你的名字或昵称 -->
+          <span class="brand__logo">GH</span>
+          <div class="brand__text">
+            <span class="brand__name">Your Name</span>
+            <span class="brand__tagline">Software Engineer / Developer</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#about">关于我</a>
+          <a href="#skills">技能</a>
+          <a href="#projects">项目</a>
+          <a href="#timeline">经历</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Hero / 简介 -->
+        <section class="section hero" id="top">
+          <div class="hero__content">
+            <!-- TODO: 换成你的标题和简介 -->
+            <p class="hero__eyebrow">Hello, GitHub 👋</p>
+            <h1 class="hero__title">
+              我是 <span class="hero__highlight">魏菲</span>
+            </h1>
+            <p class="hero__subtitle">
+              <!-- 建议一两句话：你是谁 / 做什么 -->
+              Multimodal Language Model | Agent | Computer Vision
+            </p>
+            <div class="hero__actions">
+              <!-- TODO: 换成你的 GitHub 用户名 -->
+              <a
+                class="btn btn--primary"
+                href="https://github.com/weifei7"
+                target="_blank"
+                rel="noreferrer"
+                >查看我的 GitHub</a
+              >
+              <a class="btn btn--ghost" href="#projects">浏览项目</a>
+            </div>
+            <div class="hero__meta">
+              <!-- TODO: 按需修改标签 -->
+              <span class="pill">算法工程师</span>
+              <span class="pill"></span>
+              <span class="pill">中文 / English</span>
+            </div>
+          </div>
+          <div class="hero__avatar">
+            <!-- TODO: 换成你自己的头像（放到 /images/avatar.jpg 并修改 src） -->
+            <div class="avatar-placeholder">
+              <span>头像</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 关于我 -->
+        <section class="section" id="about">
+          <div class="section__header">
+            <h2>关于我</h2>
+            <p>用几段话介绍你自己和你正在做 / 想做的事情。</p>
+          </div>
+          <div class="section__body grid-2">
+            <div class="card card--soft">
+              <!-- TODO: 自我介绍（建议 3~6 句话） -->
+              <p>
+                在这里写你的背景，例如：本科/硕士专业，目前所在城市，当前或最近的工作/学习状态。
+              </p>
+              <p>
+                你可以写自己擅长的领域（如 Web
+                全栈、数据可视化、机器学习、系统设计等），以及你比较在意的工程价值观（如代码质量、可维护性、测试驱动开发等）。
+              </p>
+              <p>
+                也可以写一点兴趣爱好，让页面更有个人气质，比如：开源项目、写作、摄影、游戏、健身等等。
+              </p>
+            </div>
+            <div class="card card--soft">
+              <h3 class="card__title">当前关注</h3>
+              <ul class="list list--bullet">
+                <!-- TODO: 修改为你当前在学 / 在做的事情 -->
+                <li>学习和实践 TypeScript / React / Next.js</li>
+                <li>维护个人开源项目，尝试自动化测试与 CI</li>
+                <li>关注 AI 工具如何提升开发效率</li>
+              </ul>
+              <h3 class="card__title">偏好技术栈</h3>
+              <p class="text-muted">
+                下面只是示例，你可以在「技能」模块里展开写。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 技能 -->
+        <section class="section" id="skills">
+          <div class="section__header">
+            <h2>技能</h2>
+            <p>简单归类你常用/擅长的技术栈。</p>
+          </div>
+          <div class="section__body skills">
+            <!-- TODO: 调整分类和内容 -->
+            <div class="card">
+              <h3 class="card__title">语言 & 基础</h3>
+              <div class="tags">
+                <span class="tag">TypeScript / JavaScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">CS 基础 · 算法</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card__title">Web / 框架</h3>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">REST / GraphQL</span>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card__title">工具 & 工程化</h3>
+              <div class="tags">
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">Docker</span>
+                <span class="tag">CI / CD</span>
+                <span class="tag">Linux / Shell</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 项目 -->
+        <section class="section" id="projects">
+          <div class="section__header">
+            <h2>代表项目</h2>
+            <p>挑 3~6 个你最想给别人看的项目，附上 GitHub 链接。</p>
+          </div>
+          <div class="section__body projects">
+            <!-- TODO: 为每个项目替换内容（可以复制 card） -->
+            <article class="card project">
+              <div class="project__header">
+                <h3 class="project__title">项目名称 Project Name</h3>
+                <span class="project__tag">个人项目</span>
+              </div>
+              <p class="project__desc">
+                用 2~3 句话概括项目：解决了什么问题？用了什么技术栈？有什么亮点？
+              </p>
+              <div class="project__meta">
+                <div class="tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">GitHub Pages</span>
+                </div>
+                <!-- TODO: 换成项目的真实链接 -->
+                <a
+                  href="https://github.com/your-github-username/your-repo"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project__link"
+                >
+                  查看代码 →
+                </a>
+              </div>
+            </article>
+
+            <article class="card project">
+              <div class="project__header">
+                <h3 class="project__title">项目名称 Project Name</h3>
+                <span class="project__tag project__tag--secondary"
+                  >团队项目</span
+                >
+              </div>
+              <p class="project__desc">
+                介绍你在团队中的角色和具体贡献，例如：负责后端接口设计、前端组件实现、部署和监控等。
+              </p>
+              <div class="project__meta">
+                <div class="tags">
+                  <span class="tag">Node.js</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">Docker</span>
+                </div>
+                <a
+                  href="https://github.com/your-github-username/your-repo"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="project__link"
+                >
+                  查看代码 →
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 经历时间线 -->
+        <section class="section" id="timeline">
+          <div class="section__header">
+            <h2>经历</h2>
+            <p>教育 / 实习 / 工作按时间列出来，突出你做过的事情。</p>
+          </div>
+          <div class="section__body timeline">
+            <!-- TODO: 为每段经历替换内容或复制更多条目 -->
+            <div class="timeline__item">
+              <div class="timeline__time">
+                <span class="timeline__period">2023 - 至今</span>
+                <span class="timeline__location">城市 · 公司 / 学校</span>
+              </div>
+              <div class="timeline__content">
+                <h3 class="timeline__title">职位 / 学位名称</h3>
+                <p class="timeline__subtitle">部门 / 专业（可选）</p>
+                <ul class="list list--bullet">
+                  <li>用一条子弹列出你负责或完成的事情。</li>
+                  <li>强调你主动做的项目、解决过的问题或可量化成果。</li>
+                  <li>例如：独立设计并实现 XX 功能，将 YY 提升了 ZZ%。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 联系方式 -->
+        <section class="section" id="contact">
+          <div class="section__header">
+            <h2>联系我</h2>
+            <p>放一些你愿意公开的联系方式或社交账号。</p>
+          </div>
+          <div class="section__body contact">
+            <!-- TODO: 按需保留/修改不同方式 -->
+            <ul class="list">
+              <li>
+                <span class="list__label">GitHub</span>
+                <a
+                  href="https://github.com/your-github-username"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="list__value"
+                  >@your-github-username</a
+                >
+              </li>
+              <li>
+                <span class="list__label">Email</span>
+                <!-- 建议用 GitHub 公开邮箱或专门的求职邮箱 -->
+                <a href="mailto:you@example.com" class="list__value"
+                  >you@example.com</a
+                >
+              </li>
+              <li>
+                <span class="list__label">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/your-linkedin"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="list__value"
+                  >your-linkedin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span class="site-footer__left">
+          <!-- TODO: 可改为你的名字或品牌 -->
+          © <span id="year"></span> Your Name
+        </span>
+        <span class="site-footer__right">
+          <a
+            href="https://github.com/your-github-username"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <a href="#top">回到顶部 ↑</a>
+        </span>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
+
