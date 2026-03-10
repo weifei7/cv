@@ -110,9 +110,9 @@ body {
 }
 
 .nav a:hover {
-  color: var(--fg);
-  border-color: var(--accent-strong);
-  background: rgba(15, 23, 42, 0.9);
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: transparent;
 }
 
 main {
@@ -207,7 +207,7 @@ main {
 .btn--primary {
   background: radial-gradient(circle at top, #38bdf8, #0ea5e9);
   color: #0b1120;
-  box-shadow: 0 16px 40px rgba(56, 189, 248, 0.55);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
 }
 
 .btn--primary:hover {
@@ -216,14 +216,14 @@ main {
 }
 
 .btn--ghost {
-  background: rgba(15, 23, 42, 0.9);
+  background: var(--bg-elevated);
   color: var(--fg);
-  border-color: rgba(148, 163, 184, 0.7);
+  border-color: var(--border-subtle);
 }
 
 .btn--ghost:hover {
   border-color: var(--accent);
-  background: rgba(15, 23, 42, 0.95);
+  background: var(--accent-soft);
 }
 
 .hero__meta {
@@ -324,8 +324,22 @@ main {
 
 .projects {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.05fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+}
+
+.project__cover {
+  margin: -16px -16px 12px;
+  overflow: hidden;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: var(--bg-elevated);
+}
+
+.project__cover-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
 }
 
 .project__header {
@@ -344,15 +358,21 @@ main {
   font-size: 11px;
   padding: 3px 8px;
   border-radius: 999px;
-  background: rgba(22, 163, 74, 0.17);
-  color: #bbf7d0;
-  border: 1px solid rgba(22, 163, 74, 0.6);
+  background: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+  border: 1px solid rgba(22, 163, 74, 0.25);
 }
 
 .project__tag--secondary {
-  background: rgba(59, 130, 246, 0.14);
-  color: #bfdbfe;
-  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.project__tag--tertiary {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border-color: rgba(245, 158, 11, 0.25);
 }
 
 .project__desc {
@@ -379,7 +399,7 @@ main {
 }
 
 .timeline {
-  border-left: 1px solid rgba(148, 163, 184, 0.6);
+  border-left: 1px solid var(--border-subtle);
   margin-left: 4px;
   padding-left: 18px;
   display: flex;
@@ -464,7 +484,7 @@ main {
 .site-footer {
   margin-top: 32px;
   padding: 12px 4px 0;
-  border-top: 1px dashed rgba(148, 163, 184, 0.5);
+  border-top: 1px dashed var(--border-subtle);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -512,7 +532,7 @@ main {
   }
 
   .projects {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -554,5 +574,207 @@ main {
     align-items: flex-start;
     gap: 4px;
   }
+}
+
+/* ===== 论文列表 ===== */
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: pub-counter;
+}
+
+.pub {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 0 14px 42px;
+  position: relative;
+  border-bottom: 1px solid var(--border-subtle);
+  counter-increment: pub-counter;
+}
+
+.pub:last-child {
+  border-bottom: none;
+}
+
+.pub::before {
+  content: counter(pub-counter);
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.pub__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a.pub__title:hover {
+  color: var(--accent);
+}
+
+.pub__authors {
+  font-size: 13px;
+  color: var(--fg-muted);
+  line-height: 1.4;
+}
+
+.pub__authors strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.pub__venue {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  width: fit-content;
+  margin-top: 2px;
+}
+
+/* ===== 主题切换按钮 ===== */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  transition: all 0.18s ease-out;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+/* ===== 微信二维码悬浮弹出 ===== */
+.contact__wechat-wrap {
+  position: relative;
+}
+
+.contact__wechat-trigger {
+  cursor: pointer;
+  color: var(--accent);
+  border-bottom: 1px dashed var(--accent);
+  transition: opacity 0.18s;
+}
+
+.contact__wechat-trigger:hover {
+  opacity: 0.8;
+}
+
+.contact__qr-popup {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 72px;
+  padding: 12px;
+  background: var(--bg-paper);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 30;
+  text-align: center;
+}
+
+.contact__qr-popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 32px;
+  border: 6px solid transparent;
+  border-top-color: var(--bg-paper);
+}
+
+.contact__wechat-wrap:hover .contact__qr-popup {
+  display: block;
+}
+
+.contact__qr-popup img {
+  width: 160px;
+  height: 160px;
+  display: block;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+
+.contact__qr-tip {
+  font-size: 11px;
+  color: var(--fg-muted);
+}
+
+/* ===== 暗色模式 ===== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --bg-paper: #1e293b;
+  --bg-elevated: #334155;
+  --fg: #f1f5f9;
+  --fg-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.1);
+  --border-subtle: #334155;
+}
+
+[data-theme="dark"] .btn--primary {
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.4);
+}
+
+[data-theme="dark"] .btn--primary:hover {
+  box-shadow: 0 16px 44px rgba(56, 189, 248, 0.55);
+}
+
+[data-theme="dark"] .project__tag {
+  color: #86efac;
+  background: rgba(22, 163, 74, 0.17);
+  border-color: rgba(22, 163, 74, 0.5);
+}
+
+[data-theme="dark"] .project__tag--secondary {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.14);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+[data-theme="dark"] .project__tag--tertiary {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.17);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+[data-theme="dark"] .contact__qr-popup {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .contact__qr-popup::after {
+  border-top-color: var(--bg-paper);
+}
+
+[data-theme="dark"] .hero__avatar-img {
+  border-color: var(--border-subtle);
 }
 

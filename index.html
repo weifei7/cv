@@ -37,10 +37,11 @@
           </div>
         </div>
         <nav class="nav">
-          <a href="#about">关于我</a>
           <a href="#timeline">经历</a>
-          <a href="#contact">联系</a>
+          <a href="#projects">项目</a>
           <a href="#publications">论文</a>
+          <a href="#contact">联系</a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="切换主题">🌙</button>
         </nav>
       </header>
 
@@ -53,13 +54,14 @@
               我是 <span class="hero__highlight">魏菲</span>
             </h1>
             <p class="hero__subtitle">
-              聚焦多模态大模型、Agent 与计算机视觉，从研究到落地优化模型与系统表现。
+              本硕毕业于大连理工大学，硕士期间在 IIAU Lab 从事计算机视觉方向工作，聚焦非聚焦模糊检测与图像去模糊等 low-level 视觉问题。
+              曾在美团从事多模态与3D感知相关研究，参与多模态大模型推理感知能力建设、端侧多模态模型研发以及视觉基座模型训练。
+              目前就职于阿里巴巴-高德地图，主要关注多模态理解与Agent方向，探索多模态能力在真实业务场景中的规模化落地。
             </p>
             <div class="hero__meta">
               <span class="pill">算法工程师</span>
               <span class="pill">多模态大模型 · Agent</span>
               <span class="pill">计算机视觉 · 3D 感知</span>
-              <span class="pill">中文 / English</span>
             </div>
           </div>
           <div class="hero__avatar">
@@ -68,39 +70,6 @@
               alt="魏菲头像"
               class="hero__avatar-img"
             />
-          </div>
-        </section>
-
-        <!-- 关于我 -->
-        <section class="section" id="about">
-          <div class="section__header">
-            <h2>关于我</h2>
-            <p>从计算机视觉起步，逐步扩展到多模态大模型、端侧大模型与 Agent 系统的算法工程师。</p>
-          </div>
-          <div class="section__body grid-2">
-            <div class="card card--soft">
-              <p>
-                本科与研究生阶段主要在 IIAU-Lab 做计算机视觉方向的研究，围绕失焦模糊检测与去模糊等课题，在 ECCV、TMM、TNNLS 等期刊与会议发表多篇论文。
-              </p>
-              <p>
-                2022 年起进入工业界从事算法工程工作，先后在多家团队围绕 AutoML、3D 感知、多模态大模型、端侧大模型等方向做探索与落地，负责从数据、建模到系统集成与效果优化的完整链路。
-              </p>
-              <p>
-                日常使用 Python + PyTorch 进行建模与实验，也会亲自落地工程化与性能调优，希望把前沿研究变成真正有用、可维护、可迭代的产品能力。
-              </p>
-            </div>
-            <div class="card card--soft">
-              <h3 class="card__title">当前关注</h3>
-              <ul class="list list--bullet">
-                <li>多模态大模型与 Agent 在视觉理解、交互和决策中的应用</li>
-                <li>3D 感知算法在自动驾驶与泛视觉任务中的效果与效率提升</li>
-                <li>AutoML / 数据与训练流程自动化，降低大模型开发门槛</li>
-              </ul>
-              <h3 class="card__title">偏好技术栈</h3>
-              <p class="text-muted">
-                以 Python + PyTorch 为主，配合常用深度学习与工程工具，关注从模型到系统的端到端优化。
-              </p>
-            </div>
           </div>
         </section>
 
@@ -156,79 +125,142 @@
           </div>
         </section>
 
+        <!-- 代表项目 -->
+        <section class="section" id="projects">
+          <div class="section__header">
+            <h2>代表项目</h2>
+            <p>研究与工程中的代表性工作。</p>
+          </div>
+          <div class="section__body projects">
+            <div class="card">
+              <div class="project__cover">
+                <img src="projects/lenna.png" alt="Lenna" class="project__cover-img" />
+              </div>
+              <div class="project__header">
+                <h3 class="project__title">Lenna</h3>
+                <span class="project__tag project__tag--secondary">研究</span>
+              </div>
+              <p class="project__desc">
+                Language Enhanced Reasoning Detection Assistant，基于多模态大模型的推理增强目标检测方案，ICASSP 2025。
+              </p>
+              <div class="project__meta">
+                <div class="tags">
+                  <span class="tag">多模态推理</span>
+                  <span class="tag">目标检测</span>
+                  <span class="tag">ICASSP</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="project__cover">
+                <img src="projects/mobilevlm.png" alt="MobileVLM" class="project__cover-img" />
+              </div>
+              <div class="project__header">
+                <h3 class="project__title">MobileVLM</h3>
+                <span class="project__tag">开源</span>
+              </div>
+              <p class="project__desc">
+                面向移动端的高效视觉语言模型系列（V1 &amp; V2），在资源受限的端侧设备上实现强大的多模态理解能力。
+              </p>
+              <div class="project__meta">
+                <div class="tags">
+                  <span class="tag">端侧大模型</span>
+                  <span class="tag">多模态</span>
+                  <span class="tag">VLM</span>
+                </div>
+                <a href="https://github.com/Meituan-AutoML/MobileVLM" target="_blank" rel="noreferrer" class="project__link">GitHub →</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="project__cover">
+                <img src="projects/defocus.png" alt="Defocus Blur Detection" class="project__cover-img" />
+              </div>
+              <div class="project__header">
+                <h3 class="project__title">Defocus Blur Detection</h3>
+                <span class="project__tag project__tag--secondary">研究</span>
+              </div>
+              <p class="project__desc">
+                提出对抗促进学习框架，统一解决失焦模糊检测与去模糊问题，ECCV 2022，系列工作拓展至 TMM &amp; TNNLS。
+              </p>
+              <div class="project__meta">
+                <div class="tags">
+                  <span class="tag">图像复原</span>
+                  <span class="tag">模糊检测</span>
+                  <span class="tag">ECCV</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- 论文 -->
         <section class="section" id="publications">
           <div class="section__header">
             <h2>论文</h2>
           </div>
           <div class="section__body">
-            <ul class="list list--bullet">
-              <li>
-                R Li, H Huang, <strong>F Wei</strong>, F Xiong, Y Wang, X Chu.
-                AdaCuRL: Adaptive Curriculum Reinforcement Learning with Invalid Sample Mitigation and Historical Revisiting.
-                arXiv preprint arXiv:2511.09478, 2025.
+            <ol class="pub-list">
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2511.09478" target="_blank" rel="noreferrer" class="pub__title">AdaCuRL: Adaptive Curriculum Reinforcement Learning with Invalid Sample Mitigation and Historical Revisiting</a>
+                <span class="pub__authors">R Li, H Huang, <strong>F Wei</strong>, F Xiong, Y Wang, X Chu</span>
+                <span class="pub__venue">arXiv:2511.09478, 2025</span>
               </li>
-              <li>
-                X Zhang, <strong>F Wei</strong>, Y Wang, W Zhao, F Li, X Chu.
-                UPRE: Zero-Shot Domain Adaptation for Object Detection via Unified Prompt and Representation Enhancement.
-                arXiv preprint arXiv:2507.00721, 2025.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2507.00721" target="_blank" rel="noreferrer" class="pub__title">UPRE: Zero-Shot Domain Adaptation for Object Detection via Unified Prompt and Representation Enhancement</a>
+                <span class="pub__authors">X Zhang, <strong>F Wei</strong>, Y Wang, W Zhao, F Li, X Chu</span>
+                <span class="pub__venue">arXiv:2507.00721, 2025</span>
               </li>
-              <li>
-                <strong>F Wei</strong>, X Zhang, A Zhang, B Zhang, X Chu.
-                Lenna: Language Enhanced Reasoning Detection Assistant.
-                ICASSP 2025, 2025.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2312.02433" target="_blank" rel="noreferrer" class="pub__title">Lenna: Language Enhanced Reasoning Detection Assistant</a>
+                <span class="pub__authors"><strong>F Wei</strong>, X Zhang, A Zhang, B Zhang, X Chu</span>
+                <span class="pub__venue">ICASSP 2025</span>
               </li>
-              <li>
-                M Kang, X Zhang, <strong>F Wei</strong>, S Xu, Y Liu.
-                Enhancing Image Editing with Chain-of-Thought Reasoning and Multimodal Large Language Models.
-                ICASSP 2025, 2025.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2401.07070" target="_blank" rel="noreferrer" class="pub__title">Enhancing Image Editing with Chain-of-Thought Reasoning and Multimodal Large Language Models</a>
+                <span class="pub__authors">M Kang, X Zhang, <strong>F Wei</strong>, S Xu, Y Liu</span>
+                <span class="pub__venue">ICASSP 2025</span>
               </li>
-              <li>
-                X Chu, H Huang, X Zhang, <strong>F Wei</strong>, Y Wang.
-                GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning.
-                arXiv preprint arXiv:2504.02546, 2025.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2504.02546" target="_blank" rel="noreferrer" class="pub__title">GPG: A Simple and Strong Reinforcement Learning Baseline for Model Reasoning</a>
+                <span class="pub__authors">X Chu, H Huang, X Zhang, <strong>F Wei</strong>, Y Wang</span>
+                <span class="pub__venue">arXiv:2504.02546, 2025</span>
               </li>
-              <li>
-                X Zhang, M Kang, <strong>F Wei</strong>, S Xu, Y Liu, L Ma.
-                TIE: Revolutionizing Text-based Image Editing for Complex-Prompt Following and High-Fidelity Editing.
-                arXiv preprint arXiv:2405.16803, 2024.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2405.16803" target="_blank" rel="noreferrer" class="pub__title">TIE: Revolutionizing Text-based Image Editing for Complex-Prompt Following and High-Fidelity Editing</a>
+                <span class="pub__authors">X Zhang, M Kang, <strong>F Wei</strong>, S Xu, Y Liu, L Ma</span>
+                <span class="pub__venue">arXiv:2405.16803, 2024</span>
               </li>
-              <li>
-                X Chu, L Qiao, X Zhang, S Xu, <strong>F Wei</strong>, Y Yang, X Sun, Y Hu, X Lin, ...
-                MobileVLM V2: Faster and Stronger Baseline for Vision Language Model.
-                arXiv preprint arXiv:2402.03766, 2024.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2402.03766" target="_blank" rel="noreferrer" class="pub__title">MobileVLM V2: Faster and Stronger Baseline for Vision Language Model</a>
+                <span class="pub__authors">X Chu, L Qiao, X Zhang, S Xu, <strong>F Wei</strong>, Y Yang, X Sun, Y Hu, X Lin, ...</span>
+                <span class="pub__venue">arXiv:2402.03766, 2024</span>
               </li>
-              <li>
-                X Chu, L Qiao, X Lin, S Xu, Y Yang, Y Hu, <strong>F Wei</strong>, X Zhang, B Zhang, X Wei, ...
-                MobileVLM: A Fast, Strong and Open Vision Language Assistant for Mobile Devices.
-                arXiv preprint arXiv:2312.16886, 2023.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2312.16886" target="_blank" rel="noreferrer" class="pub__title">MobileVLM: A Fast, Strong and Open Vision Language Assistant for Mobile Devices</a>
+                <span class="pub__authors">X Chu, L Qiao, X Lin, S Xu, Y Yang, Y Hu, <strong>F Wei</strong>, X Zhang, B Zhang, X Wei, ...</span>
+                <span class="pub__venue">arXiv:2312.16886, 2023</span>
               </li>
-              <li>
-                W Zhao, G Hu, <strong>F Wei</strong>, H Wang, Y He, H Lu.
-                Attacking Defocus Detection With Blur-Aware Transformation for Defocus Deblurring.
-                IEEE Transactions on Multimedia (TMM), 2023.
+              <li class="pub">
+                <a href="https://ieeexplore.ieee.org/document/10268945" target="_blank" rel="noreferrer" class="pub__title">Attacking Defocus Detection With Blur-Aware Transformation for Defocus Deblurring</a>
+                <span class="pub__authors">W Zhao, G Hu, <strong>F Wei</strong>, H Wang, Y He, H Lu</span>
+                <span class="pub__venue">IEEE Transactions on Multimedia (TMM), 2023</span>
               </li>
-              <li>
-                W Zhao, <strong>F Wei</strong>, H Wang, Y He, H Lu.
-                Full-Scene Defocus Blur Detection With DeFBD+ via Multi-Level Distillation Learning.
-                IEEE Transactions on Multimedia (TMM), 2023.
+              <li class="pub">
+                <a href="https://ieeexplore.ieee.org/document/10184408" target="_blank" rel="noreferrer" class="pub__title">Full-Scene Defocus Blur Detection With DeFBD+ via Multi-Level Distillation Learning</a>
+                <span class="pub__authors">W Zhao, <strong>F Wei</strong>, H Wang, Y He, H Lu</span>
+                <span class="pub__venue">IEEE Transactions on Multimedia (TMM), 2023</span>
               </li>
-              <li>
-                X Chu, L Qiao, X Lin, S Xu, Y Yang, Y Hu, <strong>F Wei</strong>, X Zhang, B Zhang, X Wei.
-                MobileVLM: A Fast, Reproducible and Strong Vision Language Assistant for Mobile Devices.
-                arXiv preprint arXiv:2312.16886, 2023.
+              <li class="pub">
+                <a href="https://ieeexplore.ieee.org/document/9893309" target="_blank" rel="noreferrer" class="pub__title">Defocus Blur Detection Attack via Mutual-Referenced Feature Transfer</a>
+                <span class="pub__authors">W Zhao, M Wang, <strong>F Wei</strong>, H Wang, Y He, H Lu</span>
+                <span class="pub__venue">IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2022</span>
               </li>
-              <li>
-                W Zhao, M Wang, <strong>F Wei</strong>, H Wang, Y He, H Lu.
-                Defocus Blur Detection Attack via Mutual-Referenced Feature Transfer.
-                IEEE Transactions on Neural Networks and Learning Systems (TNNLS), 2022.
+              <li class="pub">
+                <a href="https://arxiv.org/abs/2207.05089" target="_blank" rel="noreferrer" class="pub__title">United Defocus Blur Detection and Deblurring via Adversarial Promoting Learning</a>
+                <span class="pub__authors">W Zhao, <strong>F Wei</strong>, Y He, H Lu</span>
+                <span class="pub__venue">European Conference on Computer Vision (ECCV), 2022</span>
               </li>
-              <li>
-                W Zhao, <strong>F Wei</strong>, Y He, H Lu.
-                United Defocus Blur Detection and Deblurring via Adversarial Promoting Learning.
-                European Conference on Computer Vision (ECCV), 2022.
-              </li>
-            </ul>
+            </ol>
             <p class="text-muted">
               全部论文列表及引用信息请见 Google Scholar：
               <a
@@ -259,6 +291,14 @@
                   >@weifei7</a
                 >
               </li>
+              <li class="contact__wechat-wrap">
+                <span class="list__label">WeChat</span>
+                <span class="list__value contact__wechat-trigger">扫码添加微信</span>
+                <div class="contact__qr-popup">
+                  <img src="wechat-qr.png" alt="微信二维码" />
+                  <span class="contact__qr-tip">微信扫一扫添加</span>
+                </div>
+              </li>
               <li>
                 <span class="list__label">Email</span>
                 <a href="mailto:fwei_mail@163.com" class="list__value"
@@ -268,16 +308,6 @@
               <li>
                 <span class="list__label">Phone</span>
                 <span class="list__value">18742516107</span>
-              </li>
-              <li>
-                <span class="list__label">Google Scholar</span>
-                <a
-                  href="https://scholar.google.com/citations?hl=zh-CN&user=-ZIk4QMAAAAJ&view_op=list_works&sortby=pubdate"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="list__value"
-                  >Scholar · Wei Fei</a
-                >
               </li>
             </ul>
           </div>
